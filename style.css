@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+button {
+  cursor: pointer;
+}
+#reminder {
+  cursor: pointer;
+}
+@media only screen and (max-width: 1450px) {
+  main {
+    position: relative;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 30rem 20rem;
+  }
+  .title {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  main form {
+    margin-right: 9.4rem;
+    position: relative;
+    width: 80%;
+  }
+  .form {
+    position: relative;
+    display: block;
+  }
+  .form h1 {
+    font-size: 1.13rem;
+    color: #333;
+    margin: 1rem 0;
+  }
+  .form .input {
+    margin: 0.625rem 0;
+  }
+  .form .input label {
+    font-size: 0.75rem;
+    color: #4f4f4f;
+    margin: 0.625rem 0;
+    position: relative;
+    display: block;
+  }
+  .form .input .input-text {
+    position: relative;
+  }
+  .form .input .input-text input {
+    border: 1px solid #828282;
+    padding: 0.5rem 0.3rem 0.5rem 2.2rem;
+    color: #828282;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    width: 100%;
+  }
+  .form .input .input-text i {
+    position: absolute;
+    color: #828282;
+    font-size: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3%;
+  }
+  #address {
+    margin-top: 3.1rem;
+  }
+  #country {
+    display: inline-block;
+    margin-right: 2%;
+  }
+  #postal-code {
+    display: inline-block;
+    width: auto;
+  }
+  #country div select {
+    border: none;
+    padding: 0.5rem 0.3rem 0.5rem 2.2rem;
+    border-radius: 0.3rem;
+    border: 1px solid #828282;
+  }
+  #reminder {
+    display: inline-block;
+    margin-right: 0.625rem;
+  }
+  #reminder ~ label {
+    display: inline-block;
+    margin-top: -0.625rem;
+  }
+  #btn-submit {
+    width: 20%;
+    padding: 0.9rem 0;
+    border-radius: 0.625rem;
+    background-color: #f2994a;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    position: absolute;
+    right: 0;
+    margin-right: -3.1rem;
+    transition: background-color 0.5s;
+  }
+  #btn-submit:hover {
+    background-color: #b36018;
+  }
+  #preview {
+    position: relative;
+  }
+  #panel {
+    position: absolute;
+    width: 100%;
+    border-radius: 0.625rem;
+    background-color: #eeeeee;
+    padding: 0.625rem 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #panel .product {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin: 0.625rem 0;
+  }
+  .product img {
+    width: 30%;
+    border-radius: 0.625rem;
+    margin-right: 1.25rem;
+  }
+  .info {
+    width: 100%;
+  }
+  .info h2 {
+    font-size: 1rem;
+    color: #4e5150;
+    margin: 0.3rem 0;
+  }
+  .info p {
+    font-size: 0.75rem;
+    color: #4e5150;
+    margin: 0.3rem 0;
+  }
+  .info p strong {
+    color: #f2994a;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .quantity {
+    border-radius: 0.3rem;
+    border: 1px solid rgb(136, 136, 136);
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-top: 1.6rem;
+  }
+  .quantity button,
+  p {
+    position: relative;
+    display: block;
+  }
+  .quantity p {
+    line-height: 1.5rem;
+  }
+  .quantity button {
+    margin: 0.3rem 0;
+    border: 0;
+    background-color: #e0e0e0;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    text-align: center;
+    box-shadow: -3rem 3rem 4rem #aaa;
+    transition: all 0.5s;
+  }
+  .quantity button i {
+    font-size: 0.75rem;
+  }
+  .quantity button:hover {
+    transform: translateY(-0.6rem);
+    box-shadow: -5rem 5rem 7rem #aaa;
+  }
+  .buy-detail {
+    margin: 0.3rem 0;
+    border-top: 1px solid #bdbdbd;
+    display: flex;
+    position: relative;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .buy-detail p {
+    display: block;
+    width: 50%;
+  }
+  #shipping {
+    margin-top: 3.1rem;
+  }
+  .line-through {
+    text-decoration: line-through;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  main {
+    grid-template-columns: 100%;
+    width: 90%;
+    grid-template-rows: 25rem 1fr;
+    grid-template-areas: 'top' 'bottom';
+  }
+  main form {
+    width: 85%;
+    left: 0;
+    transform: unset;
+    margin-right: 0;
+  }
+  form {
+    grid-area: bottom;
+  }
+  #preview {
+    width: 100%;
+    grid-area: top;
+  }
+  #panel {
+    padding: 0;
+  }
+  #btn-submit {
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #postal-code {
+    width: 100%;
+  }
+  .product {
+    padding: 0 1rem;
+  }
+  .buy-detail {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
